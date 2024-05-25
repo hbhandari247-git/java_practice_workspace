@@ -6,7 +6,7 @@ public class IOClass {
 	 public static void main(String[] args) {
 	     try {
 	         // Writing binary data to a file using OutputStream
-	         byte[] data = {(byte) 0xe0, 0x4f, (byte) 0xd0, 0x20, (byte) 0xea};
+	         byte[] data = {(byte) 0xe0, 0x4f, (byte) 0xd0, 0x10, (byte) 0xea};
 	         OutputStream os = new FileOutputStream("data.bin");
 	         os.write(data);
 	         os.close();

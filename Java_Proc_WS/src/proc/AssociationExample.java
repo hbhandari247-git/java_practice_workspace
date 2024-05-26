@@ -70,7 +70,7 @@ public class AssociationExample {
 		employees.add(emp2);
 
 		// Creating a Bank object
-		Bank bank = new Bank("ICICI");
+		Bank bank = new Bank("AXIS");
 
 		// setting the employees for the Bank object
 		bank.setEmployees(employees);

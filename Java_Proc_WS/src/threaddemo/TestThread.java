@@ -38,7 +38,7 @@ public class TestThread extends Thread {
 			public void run() {
 
 				for (int i = 0; i < 5; i++) {
-					System.out.println("Child thread");
+					System.out.println("Child thread inside Main");
 				}
 			}
 		};

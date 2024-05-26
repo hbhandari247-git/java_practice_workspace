@@ -1,7 +1,7 @@
 package threaddemo;
 
 /**
- * Way-1
+ * Way-1 : Via Thread Class
  */
 /*public class ImplementingThread extends Thread {
 
@@ -18,7 +18,7 @@ package threaddemo;
 }*/
 
 /**
- * Way-2
+ * Way-2 : Via Runnable Interface
  */
 public class ImplementingThread implements Runnable {
 

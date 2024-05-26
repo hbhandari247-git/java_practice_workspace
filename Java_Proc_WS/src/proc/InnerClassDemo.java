@@ -5,6 +5,10 @@ class OuterClassDemo {
 
 	class InnerClass {
 		int y = 5;
+		
+		public int printOuterClassVariable() {
+			return x;
+		}
 	}
 }
 
@@ -13,5 +17,6 @@ public class InnerClassDemo {
 		OuterClassDemo myOuter = new OuterClassDemo();
 		OuterClassDemo.InnerClass myInner = myOuter.new InnerClass();
 		System.out.println(myInner.y + myOuter.x);
+		System.out.println(myInner.printOuterClassVariable());
 	}
 }

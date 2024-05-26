@@ -1,7 +1,7 @@
 package proc;
 
 /**
- * @author hbhandari247-git
+ * @author hbhandari247
  */
 public class MethodOverloadingExample {
 

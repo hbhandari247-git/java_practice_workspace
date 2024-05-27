@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="sim1" class="springframeworkdemo.Jio"></bean>
+	<bean id="sim2" class="springframeworkdemo.Airtel"></bean>
+	<bean id="sim3" class="springframeworkdemo.VodafoneIdea"></bean>
+
+	<bean id="state" class="autowiringdemo.State">
+		<property name="name" value="UP" />
+	</bean>
+	<bean id="city" class="autowiringdemo.City" autowire="constructor"></bean>
+	<bean id="hw" class="beanscopedemo.HelloWorld" scope="singleton"></bean>
+	<!-- <bean id="hw" class="beanscopedemo.HelloWorld" scope="prototype"></bean> -->
+
+</beans>

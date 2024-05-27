@@ -4,8 +4,13 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="sim1" class="springframeworkdemo.Jio"></bean>
-<bean id="sim2" class="springframeworkdemo.Airtel"></bean>
-<bean id="sim3" class="springframeworkdemo.VodafoneIdea"></bean>
+	<bean id="sim1" class="springframeworkdemo.Jio"></bean>
+	<bean id="sim2" class="springframeworkdemo.Airtel"></bean>
+	<bean id="sim3" class="springframeworkdemo.VodafoneIdea"></bean>
+
+	<bean id="state" class="autowiringdemo.State">
+		<property name="name" value="UP" />
+	</bean>
+	<bean id="city" class="autowiringdemo.City" autowire="constructor"></bean>
 
 </beans>

@@ -12,5 +12,7 @@
 		<property name="name" value="UP" />
 	</bean>
 	<bean id="city" class="autowiringdemo.City" autowire="constructor"></bean>
+	<bean id="hw" class="beanscopedemo.HelloWorld" scope="singleton"></bean>
+	<!-- <bean id="hw" class="beanscopedemo.HelloWorld" scope="prototype"></bean> -->
 
 </beans>

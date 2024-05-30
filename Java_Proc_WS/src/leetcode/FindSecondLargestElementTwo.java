@@ -1,6 +1,6 @@
 package leetcode;
 
-public class FindSecondLargetElementTwo {
+public class FindSecondLargestElementTwo {
 
 	/*
 	 * Function to print the second largest elements

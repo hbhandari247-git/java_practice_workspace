@@ -14,7 +14,7 @@ public class StreamAPIDemo {
 		integerList.add(9);
 		integerList.add(5);
 
-		int sum = integerList.stream().filter(element -> element > 4).mapToInt(element -> element).sum();
+		int sum = integerList.stream().filter(element -> element > 4).mapToInt(element -> element * 2).sum();
 		System.out.println(sum);
 
 		// create a list of String

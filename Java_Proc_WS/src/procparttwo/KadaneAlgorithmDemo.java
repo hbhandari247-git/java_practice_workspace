@@ -5,8 +5,10 @@ public class KadaneAlgorithmDemo {
 	public static void main(String[] args) {
 		int[] a = { -2, -3, 4, -1, -2, 1, 5, -3 };
 		int[] intArray = { -2, 3, 4, -1, 2, 1, -5, 3 };
+		int[] intArray2 = { -2, -3, -4, -1, -2, -1, -5, -3 };
 		System.out.println("Maximum contiguous sum is " + maxSubArraySum(a));
 		System.out.println("Maximum contiguous sum is " + maxSubArraySum(intArray));
+		System.out.println("Maximum contiguous sum is " + maxSubArraySum(intArray2));
 	}
 
 	// Function Call
@@ -20,6 +22,9 @@ public class KadaneAlgorithmDemo {
 				max_so_far = max_ending_here;
 			if (max_ending_here < 0)
 				max_ending_here = 0;
+		}
+		if (max_so_far < 0) {
+			max_so_far = 0;
 		}
 		return max_so_far;
 	}

@@ -5,6 +5,7 @@ public class Tester {
 		int[] intArray = new int[] { 3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5 };
 		System.out.println(findMinMaxElementInAnArray(intArray));
 		System.out.println(findSecondLargest(intArray));
+		System.out.println(findThirdLargest(intArray));
 	}
 
 	/**
@@ -59,6 +60,37 @@ public class Tester {
 		}
 
 		return secondLargest;
+	}
+
+	/**
+	 * findThirdLargest element in an array
+	 * @param arr
+	 * @return
+	 */
+	public static Integer findThirdLargest(int[] arr) {
+		if (arr == null || arr.length < 3) {
+			return null; // Handle cases where the array has fewer than 3 elements
+		}
+
+		// Initialize the largest, second largest, and third largest
+		Integer largest = null;
+		Integer secondLargest = null;
+		Integer thirdLargest = null;
+
+		for (int num : arr) {
+			if (largest == null || num > largest) {
+				thirdLargest = secondLargest;
+				secondLargest = largest;
+				largest = num;
+			} else if ((secondLargest == null || num > secondLargest) && num != largest) {
+				thirdLargest = secondLargest;
+				secondLargest = num;
+			} else if ((thirdLargest == null || num > thirdLargest) && num != largest && num != secondLargest) {
+				thirdLargest = num;
+			}
+		}
+
+		return thirdLargest;
 	}
 
 }

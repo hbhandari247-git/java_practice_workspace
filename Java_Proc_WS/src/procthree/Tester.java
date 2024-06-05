@@ -6,6 +6,7 @@ public class Tester {
 		System.out.println(findMinMaxElementInAnArray(intArray));
 		System.out.println(findSecondLargest(intArray));
 		System.out.println(findThirdLargest(intArray));
+		System.out.println(findSecondMinimum(intArray));
 	}
 
 	/**
@@ -92,6 +93,33 @@ public class Tester {
 		}
 
 		return thirdLargest;
+	}
+
+	/**
+	 * Find Second Minimum Element in an array
+	 * 
+	 * @param arr
+	 * @return
+	 */
+	public static Integer findSecondMinimum(int[] arr) {
+		if (arr == null || arr.length < 2) {
+			return null; // Handle cases where the array has fewer than 2 elements
+		}
+
+		// Initialize the largest and second largest
+		Integer smallest = null;
+		Integer secondSmallest = null;
+
+		for (int num : arr) {
+			if (smallest == null || num < smallest) {
+				secondSmallest = smallest;
+				smallest = num;
+			} else if ((secondSmallest == null || num < secondSmallest) && num != smallest) {
+				secondSmallest = num;
+			}
+		}
+
+		return secondSmallest;
 	}
 
 }

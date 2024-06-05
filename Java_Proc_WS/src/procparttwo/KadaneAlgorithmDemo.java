@@ -4,7 +4,9 @@ public class KadaneAlgorithmDemo {
 	// Driver Code
 	public static void main(String[] args) {
 		int[] a = { -2, -3, 4, -1, -2, 1, 5, -3 };
+		int[] intArray = { -2, 3, 4, -1, 2, 1, -5, 3 };
 		System.out.println("Maximum contiguous sum is " + maxSubArraySum(a));
+		System.out.println("Maximum contiguous sum is " + maxSubArraySum(intArray));
 	}
 
 	// Function Call

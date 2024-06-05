@@ -4,6 +4,7 @@ public class Tester {
 	public static void main(String[] args) {
 		int[] intArray = new int[] { 3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5 };
 		System.out.println(findMinMaxElementInAnArray(intArray));
+		System.out.println(findSecondLargest(intArray));
 	}
 
 	/**
@@ -32,4 +33,32 @@ public class Tester {
 		System.out.println("MaxNum::: " + maxNum);
 		return new int[] { maxNum, minNum };
 	}
+
+	/**
+	 * Find Second Largest Element in an array
+	 * 
+	 * @param arr
+	 * @return
+	 */
+	public static Integer findSecondLargest(int[] arr) {
+		if (arr == null || arr.length < 2) {
+			return null; // Handle cases where the array has fewer than 2 elements
+		}
+
+		// Initialize the largest and second largest
+		Integer largest = null;
+		Integer secondLargest = null;
+
+		for (int num : arr) {
+			if (largest == null || num > largest) {
+				secondLargest = largest;
+				largest = num;
+			} else if ((secondLargest == null || num > secondLargest) && num != largest) {
+				secondLargest = num;
+			}
+		}
+
+		return secondLargest;
+	}
+
 }

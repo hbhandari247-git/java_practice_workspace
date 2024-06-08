@@ -29,5 +29,26 @@ public class TesterNew {
 		// Checking the values associated with the keys
 		System.out.println("Value for key1: " + map.get(key1)); // Output: value1
 		System.out.println("Value for key2: " + map.get(key2)); // Output: value2
+
+		IdentityHashMap<Object, String> identityMap = new IdentityHashMap<>();
+		Object key3 = new Object();
+		Object key4 = new Object();
+
+		identityMap.put(key3, "Object 1");
+		identityMap.put(key4, "Object 2");
+
+		System.out.println("Map size: " + identityMap.size()); // Output: 2
+
+		// Even though logically these keys are equal (as objects), they are different
+		// instances
+		Object key5 = new Object();
+		identityMap.put(key5, "Object 3");
+		System.out.println("Map size after adding key3: " + identityMap.size()); // Output: 3
+
+		// Using a key reference that already exists in the map
+		System.out.println("Value for key1: " + identityMap.get(key3)); // Output: Object 1
+		System.out.println("Value for key2: " + identityMap.get(key4)); // Output: Object 2
+		System.out.println("Value for key3: " + identityMap.get(key5)); // Output: Object 3
+
 	}
 }

@@ -53,13 +53,13 @@ public class TrafficLightApplet extends Applet implements Runnable {
 		try {
 			while (true) {
 				if (currentColor.equals(Color.RED)) {
-					Thread.sleep(1000); // Red for 30 seconds
+					Thread.sleep(30000); // Red for 30 seconds
 					currentColor = Color.GREEN;
 				} else if (currentColor.equals(Color.GREEN)) {
-					Thread.sleep(1000); // Green for 25 seconds
+					Thread.sleep(25000); // Green for 25 seconds
 					currentColor = Color.YELLOW;
 				} else if (currentColor.equals(Color.YELLOW)) {
-					Thread.sleep(1000); // Yellow for 5 seconds
+					Thread.sleep(5000); // Yellow for 5 seconds
 					currentColor = Color.RED;
 				}
 				repaint();

@@ -2,6 +2,9 @@ package procthree;
 
 import java.util.Arrays;
 
+/**
+ * @author Himanshu Bhandari
+ */
 public class RearrangeArray {
 	public static void rearrange(int[] arr) {
 		int left = 0, right = arr.length - 1;

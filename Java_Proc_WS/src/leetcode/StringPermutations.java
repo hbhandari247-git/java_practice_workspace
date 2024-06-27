@@ -8,6 +8,10 @@ public class StringPermutations {
 		String str = "abc";
 		List<String> permutations = generatePermutations(str);
 		System.out.println("Permutations of " + str + ": " + permutations);
+		
+		
+		String str2 = "abcabcef";
+		System.out.println(str2.substring(0, 0));
 	}
 
 	public static List<String> generatePermutations(String str) {

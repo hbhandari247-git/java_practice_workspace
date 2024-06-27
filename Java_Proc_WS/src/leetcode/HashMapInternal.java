@@ -1,4 +1,4 @@
-package main.practice.interview;
+package leetcode;
 
 import java.util.LinkedList;
 

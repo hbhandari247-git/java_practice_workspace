@@ -1,4 +1,4 @@
-package main.practice.interview;
+package leetcode;
 
 public class StringBuilderExample {
 	private static StringBuilder sharedBuilder = new StringBuilder("Start");

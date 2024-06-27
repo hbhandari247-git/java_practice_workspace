@@ -1,4 +1,4 @@
-package main.practice.interview;
+package leetcode;
 
 public class StringBufferExample {
 	private static StringBuffer sharedBuffer = new StringBuffer("Start");
